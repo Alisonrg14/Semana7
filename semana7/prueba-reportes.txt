@@ -1,0 +1,29 @@
+Prueba de reportes:
+
+1) Enviar POST a http://localhost:3000/reportes con JSON:
+{
+  "tipo": "Infraestructura",
+  "descripcion": "Daño en alumbrado público"
+}
+
+2) Enviar otro POST con:
+{
+  "tipo": "Ambiente",
+  "descripcion": "Acumulación de residuos en una zona comunitaria"
+}
+
+3) Al consultar GET http://localhost:3000/reportes se obtiene:
+[
+  {
+    "id": 1,
+    "tipo": "Infraestructura",
+    "descripcion": "Daño en alumbrado público"
+  },
+  {
+    "id": 2,
+    "tipo": "Ambiente",
+    "descripcion": "Acumulación de residuos en una zona comunitaria"
+  }
+]
+
+Nota: Los datos se guardan en memoria; al reiniciar el servidor se pierden.
